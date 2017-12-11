@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+   int n,i;
+   int a,c,k;
+   int d=1;
+   int  a1=0;
+
+    printf("enter array n = ");
+    scanf("%d", &n);
+    int mas[n];
+    c=mas[n];
+    for(i=1; i<=n; i++)
+    {
+        printf("mas[%d]= ", i);
+        scanf("%d", &mas[i]);
+    }
+    getchar();
+    printf("\n");
+    for(i=1; i<=n; i++)
+    {
+        a1=0;
+        c=mas[i];
+        while(mas[i])
+        {
+            a=mas[i]%10;
+            a1=a+a1;
+            mas[i]=mas[i]/10;
+        }
+             if(a1%7==0)
+                {
+                    printf("Number,sum of which is multiple of 7: %d \n", c);
+                    printf("Its prime factors: ");
+                   for(d=1; d<=c; d++)
+                   {
+                       k=c%d;
+
+                       if(k==0)
+                       {
+                           printf(" %d ", d);
+                       }
+                   }
+                   printf("\n\n");
+                            }
+                        else{
+                                printf("The sum is not multiple of 7\n");
+                        }
+                    }
+        return 0;
+}
